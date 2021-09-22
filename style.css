@@ -1,0 +1,35 @@
+body{
+    background-color: whitesmoke;
+}
+.top-bar{
+    margin-top: 2px;
+    background-color: #97db8d;
+    text-align:center;
+    font-style: italic;
+    font-family: 🇿🇦 ;
+}
+
+
+.bar{
+    background-color:#61CE70;
+}
+
+.navbar {
+    font-size: 1.21rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+   
+}
+.programs{
+    margin-left: 15rem;
+}
+
+.navbar-brand img {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 1.5rem;
+}
+
+#center{
+    margin-left: 1.70rem;
+}
