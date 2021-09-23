@@ -10,7 +10,8 @@
         "laminas/laminas-httphandlerrunner": "^2.1",
         "vlucas/phpdotenv": "^5.3",
         "doctrine/orm": "^2.9",
-        "symfony/translation": "^5.3"
+        "symfony/translation": "^5.3",
+        "symfony/twig-bridge": "^5.3"
     },
     "license": "MIT",
     "autoload": {

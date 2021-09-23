@@ -1,0 +1,42 @@
+
+{% macro programmesListItem(name, link, img) %}
+<li class="col-md-4 my-4">
+  <a href="{{ link }}" class="d-block shadow-sm rounded h-100 position-relative">
+    <img src="resources/images/programmes/{{ img }}" alt="" width="80" height="200" class="d-block w-100 rounded" />
+    <div class="w-100 p-2 fw-bold fs-4 position-absolute bottom-0 text-white bg-blur rounded-bottom">{{ name }}</div>
+  </a>
+</li>
+{% endmacro %}
+
+{% macro tracksListItem(name, duration, link, img) %}
+<li class="col-md-4 my-4">
+  <a href="{{ link }}" class="d-block shadow-sm rounded bg-white">
+    <img src="resources/images/tracks/{{ img }}" alt="" width="80" height="200" class="d-block w-100 rounded-top" />
+    <div class="p-2 pb-0 fs-2 text-body">Track {{ name }}</div>
+    <div class="p-2 text-secondary">
+      <i class="far fa-clock"></i>
+      <span>{{ duration }}</span>
+    </div>
+  </a>
+</li>
+{% endmacro %}
+
+{% macro teamListItem(name, title, link, img) %}
+<li class="col-md-6 col-xl-3 my-4">
+  <a href="{{ link }}" class="d-block shadow-sm rounded h-100">
+    <img src="resources/images/team/{{ img }}" alt="" width="80" height="300" class="d-block w-100 rounded-top" />
+    <div class="p-2 pb-0 fw-bold text-body fs-5">{{ title }}</div>
+    <div class="p-2 text-secondary">{{ name }}</div>
+  </a>
+</li>
+{% endmacro %}
+
+{% macro partnersListItem(name, img) %}
+<li class="">
+  <img src="resources/images/partners/{{ img }}" alt="{{ name }}" width="100" height="100" class="d-block rounded bg-white me-2 mb-2" />
+</li>
+{% endmacro %}
+
+
+
+

@@ -7,6 +7,7 @@ use Twig\Loader\FilesystemLoader;
 use Laminas\Diactoros\Response\HtmlResponse;
 use Symfony\Component\Translation\Translator;
 use Symfony\Component\Translation\Loader\PhpFileLoader;
+use Symfony\Bridge\Twig\Extension\TranslationExtension;
 
 
 class Response {
@@ -17,7 +18,7 @@ class Response {
     $translator = new Translator('en');
     $translator->setFallbackLocales(['en']);
     $translator->addLoader('php', new PhpFileLoader());
-    $translator->addResource('php', dirname(__DIR__).'/Locale/message.en.php', 'en');
+    $translator->addResource('php', dirname(__DIR__).'/Locale/strings.en.php', 'en');
     return $translator;
   }
 
@@ -42,6 +43,7 @@ class Response {
 
   public static function view(string $name, array $params = []) : HtmlResponse {
     $twig = static::getTwig();
+    $twig->addExtension(new TranslationExtension(static::getTranslator()));
     $html = $twig->render($name.'.html', $params);
     return new HtmlResponse($html);
   }

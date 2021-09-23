@@ -1,0 +1,22 @@
+
+{% macro footerListItem(name, link) %}
+<li>
+  <a href="{{ link }}" class="text-white">{{ name|trans }}</a>
+</li>
+{% endmacro %}
+
+{% macro navLink(name, link) %}
+<li class="px-2 mb-3 mb-lg-0">
+  <a href="{{ link }}" class="text-white d-block p-2 border border-white rounded">{{ name|trans }}</a>
+</li>
+{% endmacro %}
+
+{% macro navSigninLink(name, link) %}
+<li class="px-2 mb-3 mb-lg-0">
+  <a href="{{ link }}" class="text-white d-block p-2 border bg-sub-main rounded">{{ name|trans }}</a>
+</li>
+{% endmacro %}
+
+
+
+

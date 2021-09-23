@@ -1,35 +1,142 @@
+
+*:focus {
+  outline: 2px dashed #808080;
+}
+
+html {
+  height: 100%;
+}
+
 body{
-    background-color: whitesmoke;
+  min-height: 100%;
+  position: relative;
+  background-color: #f5f5f5;
+  font-family: 'Nunito', sans-serif;
 }
+
+a {
+  text-decoration: none;
+}
+
+main {
+  padding-bottom: 700px;
+}
+
+.h-0 {
+  height: 0px;
+  overflow-y: hidden;
+}
+
+.bg-main {
+  background-color: #61CE70;
+}
+
+.bg-main-grad {
+  background-image: linear-gradient(#61CE70, #000000);
+}
+
+.bg-main-gradx {
+  background-image: linear-gradient(#f5f5f5, #61CE70);
+}
+
+.text-main {
+  color: #61CE70;
+}
+
+.bg-main-varient {
+  background-color: #2b943f;
+}
+
+.text-main-varient {
+  color: #2b943f;
+}
+
+.bg-sub-main {
+  background-color: #1E90FF;
+}
+
+.text-sub-main {
+  color: #1E90FF;
+}
+
+.bg-blur {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+button {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+button:hover,
+button:active {
+  background-color: #DCDCDC !important;
+}
+
+.nav-drawer {
+  z-index: 3;
+  position: fixed;
+  transition: right 0.5s;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.nav-drawer > ul {
+  overflow: auto;
+}
+
+
+@media only screen and (min-width: 992px) {
+  
+  main {
+    padding-bottom: 400px;
+  }
+
+  .nav-drawer {
+    position: static;
+  }
+
+  .nav-drawer > ul {
+    overflow: visible;
+    width: 100% !important;
+  }
+
+  .nav-drawer-programmes {
+    position: absolute;
+  }
+
+}
+
+
 .top-bar{
-    margin-top: 2px;
-    background-color: #97db8d;
-    text-align:center;
-    font-style: italic;
-    font-family: 🇿🇦 ;
+  margin-top: 2px;
+  background-color: #97db8d;
+  text-align:center;
+  font-style: italic;
 }
 
-
-.bar{
-    background-color:#61CE70;
+.bar {
+  background-color:#61CE70;
 }
 
 .navbar {
-    font-size: 1.21rem;
-    font-weight: 600;
-    letter-spacing: .1rem;
-   
+  font-size: 1.21rem;
+  font-weight: 600;
+  letter-spacing: .1rem;
+ 
 }
-.programs{
-    margin-left: 15rem;
+.programs {
+  margin-left: 15rem;
 }
 
 .navbar-brand img {
-    width: 3.5rem;
-    height: 3.5rem;
-    border-radius: 1.5rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 1.5rem;
 }
 
-#center{
-    margin-left: 1.70rem;
+#center {
+  margin-left: 1.70rem;
 }
+
+
