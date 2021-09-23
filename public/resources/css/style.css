@@ -63,15 +63,8 @@ main {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-
-button {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-button:hover,
-button:active {
-  background-color: #DCDCDC !important;
+.form-main {
+  max-width: 400px;
 }
 
 .nav-drawer {
@@ -86,10 +79,13 @@ button:active {
 }
 
 
+
+
+
 @media only screen and (min-width: 992px) {
   
   main {
-    padding-bottom: 400px;
+    padding-bottom: 350px;
   }
 
   .nav-drawer {

@@ -13,6 +13,13 @@ class StudentController {
     return Response::view('student/signin');
   }
 
-}
+  public function signUp(ServerRequest $request) : HtmlResponse {
+    return Response::view('student/signup');
+  }
 
+  public function postSignUp(ServerRequest $request) : HtmlResponse {
+    return Response::view('student/signup');
+  }
+
+}
 

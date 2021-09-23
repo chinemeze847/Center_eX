@@ -1,3 +1,29 @@
 {% extends 'base.html' %}
 
+{% block main %}
+  <section>
+    <div class="container">
+      <form action="" method="POST" class="p-4 my-5 shadow rounded bg-white form-main mx-auto">
+        <h2 class="fw-bold fs-3 text-main">Sign in, and continue learning...</h2>
+        <div class="mb-3">
+          <label for="email-input">Email</label>
+          <input type="email" name="email" class="form-control" id="email-input" />
+        </div>
+        <div class="mb-3">
+          <label for="password-input">Password</label>
+          <input type="password" name="password" class="form-control" id="password-input" />
+        </div>
+        <div class="mb-3">
+          <button type="submit" class="btn btn-primary w-100">Sign in</button>
+        </div>
+        <p>
+          <span>Don't have an account?</span> 
+          <a href="student/signup">Sign up</a>
+        </p>
+      </form>
+    </div>
+  </section>
+{% endblock %}
+
+
 
