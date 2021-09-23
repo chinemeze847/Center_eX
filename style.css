@@ -6,12 +6,12 @@ body{
     background-color: #97db8d;
     text-align:center;
     font-style: italic;
-    font-family: 🇿🇦 ;
 }
 
 
 .bar{
     background-color:#61CE70;
+    overflow: hidden;
 }
 
 .navbar {
@@ -21,7 +21,7 @@ body{
    
 }
 .programs{
-    margin-left: 15rem;
+    margin-left: 1rem;
 }
 
 .navbar-brand img {
@@ -31,5 +31,20 @@ body{
 }
 
 #center{
-    margin-left: 1.70rem;
+    margin-left: 1.0rem;
+}
+#mycarousel{
+    margin: 10px auto;
+}
+
+.img-responsive{
+    height: 150px;
+}
+
+.row{
+    margin: 5px;
+
+}
+.nav-link {
+    color: white;
 }
