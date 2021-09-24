@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% import 'macros/form.html' as form %}
+
+{% block main %}
+  <section>
+    <div class="container">
+      <form action="" method="POST" class="p-4 my-5 shadow rounded bg-white form-main mx-auto">
+
+        {{ form.header('Sign up, and start learning...') }}
+        
+        {% set errors = session.getFlash('errors') %}
+        {% set values = session.getFlash('values') %}
+
+        {{ form.input('First name', 'text', 'fn-input', 'first_name', values.first_name, errors.first_name) }}
+
+        {{ form.input('Last name', 'text', 'ln-input', 'last_name', values.last_name, errors.last_name) }}
+
+        {{ form.input('Email', 'email', 'email-input', 'email', values.email, errors.email) }}
+
+        {{ form.input('Password', 'password', 'password-input', 'password', values.password, errors.password) }}
+
+        {{ form.input('Confirm password', 'password', 'cpassword-input', 'confirm_password', values.confirm_password, errors.confirm_password) }}
+
+        {{ form.submitButton('Sign up') }}
+
+        {{ form.accountLink('Already have an account?', 'student/signin', 'Sign in') }}
+
+      </form>
+    </div>
+  </section>
+{% endblock %}      
+
+

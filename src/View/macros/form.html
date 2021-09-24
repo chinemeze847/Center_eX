@@ -1,0 +1,32 @@
+
+{% macro input(label, type, id, name, value, error) %}
+<div class="mb-3">
+  <label for="{{ id }}">{{ label }}</label>
+  <input 
+    type="{{ type }}" 
+    id="{{ id }}"
+    name="{{ name }}" 
+    value="{{ value }}"
+    class="form-control {{ error ? 'is-invalid' : '' }}"  />
+  <div class="invalid-feedback">{{ error }}</div>
+</div>
+{% endmacro %}
+
+{% macro submitButton(label) %}
+<div class="mb-3">
+  <button type="submit" class="btn btn-primary w-100">{{ label }}</button>
+</div>
+{% endmacro %}
+
+{% macro accountLink(qtn, link, label) %}
+<p>
+  <span>Already have an account?</span> 
+  <a href="{{ link }}">{{ label }}</a>
+</p>
+{% endmacro %}
+
+{% macro header(label) %}
+<h2 class="fw-bold fs-3 text-main">{{ label }}</h2>
+{% endmacro %}
+
+
