@@ -1,5 +1,7 @@
 {% import 'macros/base.html' as base %}
 
+{% set auth = session.get('auth') %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -72,10 +74,20 @@
                     </ul>
                   </div>
                 </li>
+
                 {{ base.navLink('About_us', '') }}
-                {{ base.navLink('Sign_up', 'student/signup') }}
-                {{ base.navSigninLink('I_m_teaching', '') }}
-                {{ base.navSigninLink('I_m_learning', 'student/signin') }}
+
+                {% if auth %}
+                  {{ base.navSigninLink('My Account', '') }}
+                  <li class="px-2 mb-3 mb-lg-0">
+                    <a href="student/signout" class="text-white d-block p-2 border bg-danger rounded">Sign out</a>
+                  </li>
+                {% else %}
+                  {{ base.navLink('Sign_up', 'student/signup') }}
+                  {{ base.navSigninLink('I_m_teaching', '') }}
+                  {{ base.navSigninLink('I_m_learning', 'student/signin') }}
+                {% endif %}
+
               </ul>
             </div>
           </nav> 
