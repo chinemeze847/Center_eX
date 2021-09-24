@@ -7,6 +7,6 @@ FUTO Center of Excellence in Sustainable Procurement, Enviromental and Social St
 3. Copy the contents of .env.example into it.
 4. Update the database values to fit your environment.
 5. Import the database schema file at the root of this project into your database.
-6. Start your dev server and visit <localhost>/center_ex/public in your browser.
+6. Start your dev server and visit *your_localhost*/center_ex/public in your browser.
 
 
