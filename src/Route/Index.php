@@ -3,6 +3,6 @@
 use Cespess\Web\Core\App;
 use Cespess\Web\Controller\IndexController;
 
-App::route()->get('/center_ex/public/', [IndexController::class, 'home']);
+App::route()->get('/', [IndexController::class, 'home']);
 
 

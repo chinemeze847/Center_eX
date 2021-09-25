@@ -22,8 +22,6 @@ use Aura\Session\Segment as SessionSegment;
 
 class App {
 
-  public static string $BASE_URL = '';
-
   private static ?App $app = null;
   
   private Router $router;
@@ -66,8 +64,6 @@ class App {
     
     $this->loadEnvVariables();
 
-    static::$BASE_URL = $_ENV['APP_URL'];
-
     $this->loadRoutes();
 
     $response = $this->router->dispatch($this->createRequest());
@@ -83,7 +79,7 @@ class App {
 
   private function loadRoutes() : void {
     $this->router = new Router;
-    $routeFiles = explode(',', $_ENV['ROUTE_FILES']);
+    $routeFiles = require dirname(__DIR__)."/Route/config.php";
     foreach ($routeFiles as $file) {
       require dirname(__DIR__)."/Route/{$file}.php";
     }
@@ -131,7 +127,7 @@ class App {
   public static function redirectWithFormData(string $url, array $inputs, array $errors) : ResponseInterface {
     App::session()->setFlash('values', $inputs);
     App::session()->setFlash('errors', $errors);
-    return new RedirectResponse(static::$BASE_URL.$url);
+    return new RedirectResponse($url);
   }
 
 

@@ -26,7 +26,7 @@ class StudentController {
   
   public function signOut(ServerRequest $request) : Response {
     App::session()->clear();
-    return new RedirectResponse(App::$BASE_URL.'/');
+    return new RedirectResponse('/');
   }
 
   public function postSignUp(ServerRequest $request) : Response {
@@ -78,7 +78,7 @@ class StudentController {
 
     App::session()->set('auth', $student);
 
-    return new RedirectResponse(App::$BASE_URL.'/');
+    return new RedirectResponse('/');
   }
 
   public function postSignIn(ServerRequest $request) : Response {
@@ -100,7 +100,7 @@ class StudentController {
 
         App::session()->set('auth', $student);
 
-        return new RedirectResponse(App::$BASE_URL.'/');
+        return new RedirectResponse('/');
       }
     }
 
